@@ -1,4 +1,4 @@
-# Sylius Authorize>net payment gateway plugin  
+# Sylius Authorize.net payment gateway plugin  
 <div align="center">
     <a href="http://sylius.com" title="Sylius" target="_blank"><img src="https://demo.sylius.com/assets/shop/img/logo.png" width="300" /></a>
     <br />
