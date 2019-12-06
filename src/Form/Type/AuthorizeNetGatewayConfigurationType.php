@@ -25,7 +25,7 @@ final class AuthorizeNetGatewayConfigurationType extends AbstractType
             ])
             ->add('transaction_key', TextType::class, [
                 'label' => 'Transaction Key',
-                'constrants' => [
+                'constraints' => [
                     new NotBlank([
                         'message' => 'Transaction key should not be empty',
                         'groups' => ['sylius']

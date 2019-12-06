@@ -11,7 +11,7 @@ class AuthorizeNetGatewayFactory extends GatewayFactory
     protected function populateConfig(ArrayObject $config)
     {
         $config->defaults([
-            'payum.factory_name' => 'authorizenet',
+            'payum.factory_name' => 'authorize_net',
             'payum.factory_title' => 'Authorize.net'
         ]);
     }
