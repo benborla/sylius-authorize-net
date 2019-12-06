@@ -1,12 +1,13 @@
 services:
-    benborla.authorize_net.gateway_factory:
+    benborla.authorizenet.gateway_factory:
         class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
-        arguments: [BenBorla\AuthorizeNetPlugin\Form\Type\AuthorizeNetGatewayConfigurationType]
+        arguments: [Czende\GoPayPlugin\GoPayGatewayFactory]
+        arguments: [BenBorla\AuthorizeNetPlugin\AuthorizeNetGatewayFactory]
         tags:
-            - { name: payum.gateway_factory_builder, factory: authorize_net }
+            - { name: payum.gateway_factory_builder, factory: authorizenet }
 
-    benborla.authorize_net.form.type.gateway_configuration:
+    benborla.authorizenet.form.type.gateway_configuration:
         class: BenBorla\AuthorizeNetPlugin\Form\Type\AuthorizeNetGatewayConfigurationType
-        tabs:
-            - { name: sylius.gateway_configuration_type, type: authorize_net, label: Authorize.net }
+        tags:
+            - { name: sylius.gateway_configuration_type, type: authorizenet, label: Authorize.net }
             - { name: form.type }
