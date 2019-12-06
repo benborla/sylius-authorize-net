@@ -1,0 +1,12 @@
+services:
+    benborla.authorize_net.gateway_factory:
+        class: Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder
+        arguments: [BenBorla\AuthorizeNetPlugin\Form\Type\AuthorizeNetGatewayConfigurationType]
+        tags:
+            - { name: payum.gateway_factory_builder, factory: authorize_net }
+
+    benborla.authorize_net.form.type.gateway_configuration:
+        class: BenBorla\AuthorizeNetPlugin\Form\Type\AuthorizeNetGatewayConfigurationType
+        tabs:
+            - { name: sylius.gateway_configuration_type, type: authorize_net, label: Authorize.net }
+            - { name: form.type }
