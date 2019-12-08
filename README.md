@@ -1,27 +1,53 @@
-# Sylius Authorize.net payment gateway plugin  
-<div align="center">
-    <a href="http://sylius.com" title="Sylius" target="_blank"><img src="https://demo.sylius.com/assets/shop/img/logo.png" width="300" /></a>
-    <br />
-    [Authorize.net logo here]
-</div>
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE)
+[![Build Status][ico-travis]][link-travis]
+[![Quality Score][ico-code-quality]][link-code-quality]
+
+# Authorize.net Payment plugin for Sylius
+
+This plugin adds Authorize.net as a payment option to Sylius.
 
 ## Installation
 
+### 1. Install plugin
+ 
 ```bash
 $ composer require benborla/authorize-net-plugin
 ```
-    
-Add plugin dependencies to your bundles.php file:
+
+### 2. Make sure the plugin is added to `bundles.php`:
 
 ```php
-    return [
-    ...
+# config/bundles.php
         BenBorla\SyliusAuthorizeNetPlugin\BenBorlaSyliusAuthorizeNetPlugin::class => ['all' => true],
-    ];
 ```
 
-## Usage
-Add your test credentials in Sylius admin as new payment method. Complete couple
-of orders with different states and send email to Authorize.net authorities. 
-After the review you will get production credentials, so just change it in Sylius admin and you are ready to go. 
+### 3. Import the config file
 
+```yaml
+# config/packages/_sylius.yaml
+imports:
+    - { resource: "@BenBorlaSyliusAuthorizeNetPlugin/Resources/config/app/config.yaml" }
+```
+
+### 4. (Optional) Import fixtures to play in your app
+
+````yaml
+# config/packages/_sylius.yaml
+imports:
+    - { resource: "@BenBorlaSyliusAuthorizeNetPlugin/Resources/config/app/fixtures.yaml" }    
+````
+
+## Configuration
+
+Create a new Payment method of the type *Authorize.net* and fill out the required form fields.
+
+## Testing
+
+### Automated tests
+
+Run `composer tests`
+
+### Manual testing
+
+- Use credit card numbers from https://developer.authorize.net/hello_world/testing_guide/
