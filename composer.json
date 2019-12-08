@@ -15,7 +15,8 @@
     "require": {
         "php": "^7.2",
         "payum/authorize-net-aim": "^1.5",
-        "sylius/sylius": "^1.5.0"
+        "sylius/sylius": "^1.5.0",
+        "authorizenet/authorizenet": "^2.0"
     },
     "require-dev": {
         "behat/behat": "^3.4",
