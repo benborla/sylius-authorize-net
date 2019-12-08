@@ -1,12 +1,11 @@
-/vendor
-/.idea
-.DS_STORE
+/vendor/
+/node_modules/
+/composer.lock
 
-tests/Application/web
-!tests/Application/web/app_test.php
+/etc/build/*
+!/etc/build/.gitignore
 
-tests/Application/var/*
+/tests/Application/yarn.lock
 
-tests/Application/node_modules
-
-*.DS_Store
+/behat.yml
+/phpspec.yml

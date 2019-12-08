@@ -16,7 +16,7 @@ Add plugin dependencies to your bundles.php file:
 ```php
     return [
     ...
-        BenBorla\AuthorizeNetPlugin\BenBorlaAuthorizeNetPlugin::class => ['all' => true],
+        BenBorla\SyliusAuthorizeNetPlugin\BenBorlaAuthorizeNetPlugin::class => ['all' => true],
     ];
 ```
 
@@ -24,3 +24,4 @@ Add plugin dependencies to your bundles.php file:
 Add your test credentials in Sylius admin as new payment method. Complete couple
 of orders with different states and send email to Authorize.net authorities. 
 After the review you will get production credentials, so just change it in Sylius admin and you are ready to go. 
+

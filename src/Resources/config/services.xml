@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="benborla_sylius_authorize_net.state_machine_resolver"
+                 class="BenBorla\SyliusAuthorizeNetPlugin\StateMachine\Resolver"
+                 public="true">
+        </service>
+
+        <service id="benborla_sylius_authorize_net.form.type.authorize_net_gateway_configuration"
+                 class="BenBorla\SyliusAuthorizeNetPlugin\Form\Type\AuthorizeNetGatewayConfigurationType">
+
+            <tag name="sylius.gateway_configuration_type"
+                 type="authorize_net_aim"
+                 label="benborla_sylius_authorize_net.payum_gateway_factory.authorize_net" />
+        </service>
+
+        <service id="benborla_sylius_authorize_net.payum.gateway_factory_builder"
+                 class="Payum\Core\Bridge\Symfony\Builder\GatewayFactoryBuilder">
+
+            <argument>Payum\AuthorizeNet\Aim\AuthorizeNetAimGatewayFactory</argument>
+
+            <tag name="payum.gateway_factory_builder"
+                 factory="authorize_net_aim" />
+        </service>
+
+    </services>
+</container>
