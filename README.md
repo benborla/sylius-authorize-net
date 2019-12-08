@@ -16,7 +16,7 @@ Add plugin dependencies to your bundles.php file:
 ```php
     return [
     ...
-        BenBorla\SyliusAuthorizeNetPlugin\BenBorlaAuthorizeNetPlugin::class => ['all' => true],
+        BenBorla\SyliusAuthorizeNetPlugin\BenBorlaSyliusAuthorizeNetPlugin::class => ['all' => true],
     ];
 ```
 
