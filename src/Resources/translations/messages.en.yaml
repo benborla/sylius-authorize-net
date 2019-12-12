@@ -6,6 +6,9 @@ benborla_sylius_authorize_net:
             authorize_net:
                 login_id: Login ID
                 transaction_key: Transaction Key
+                auto_capture: Auto Capture
+                yes: Yes
+                no: No
             error:
                 login_id:
                     not_blank: Login ID should not be empty
