@@ -37,6 +37,16 @@ class AuthorizeNetGatewayConfigurationType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('auto_capture', ChoiceType::class, [
+                'label' => 'benborla_sylius_authorize_net.form.gateway_configuration.authorize_net.auto_capture',
+                'choices' => [
+                    'benborla_sylius_authorize_net.form.gateway_configuration.authorize_net.no' => 0,
+                    'benborla_sylius_authorize_net.form.gateway_configuration.authorize_net.yes' => 1
+                ]
+            ])
+            ->add('use_authorize', HiddenType::class, [
+                'data' => true,
+            ])            
         ;
     }
 }
