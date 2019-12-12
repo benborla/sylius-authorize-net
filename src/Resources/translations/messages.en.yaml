@@ -14,3 +14,7 @@ benborla_sylius_authorize_net:
                     not_blank: Login ID should not be empty
                 transaction_key:
                     not_blank: Transaction Key should not be empty
+__sylius:
+    payum_action:
+        payment:
+            description: This is a payment made in Zeta Meds Authorize.net gateway

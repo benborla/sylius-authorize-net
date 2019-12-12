@@ -45,8 +45,8 @@ class AuthorizeNetGatewayConfigurationType extends AbstractType
                 ]
             ])
             ->add('use_authorize', HiddenType::class, [
-                'data' => true,
-            ])            
+                'data' => false,
+            ])
         ;
     }
 }
